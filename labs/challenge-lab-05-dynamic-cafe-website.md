@@ -153,3 +153,107 @@ This is a study excerpt, not a complete runnable script. No password assignment 
 - A machine image does not replace destination networking, IAM attachment, or Region-specific external configuration.
 - Test **menu data, orders, and Order History**, not just whether a page opens.
 - “Production” is the lab instance's purpose; its lab-required open ports are not a general production design.
+
+## Lab Completion Checkpoint / Lab 結束檢查點
+
+Use this checkpoint at the end of every future AWS Academy lab: record completion evidence, review the concepts, explain them simply, decide whether to rebuild independently, and review cleanup. The entries below record today's Challenge Lab 05.
+
+### 1. Class Lab Complete
+
+| Check | Today's record |
+| --- | --- |
+| Lab completed successfully | Yes |
+| Important troubleshooting captured | Yes |
+| Full notes documented | Yes |
+| Cheat sheet documented | Yes |
+| GitHub documentation | Already committed/pushed before this checkpoint update |
+
+This completion status records the student's confirmation. The earlier notes retain the specific work and test results supplied; this checkpoint does not add unrecorded execution steps.
+
+### 2. SAA Takeaways
+
+- **Security Group vs IAM Role:** security groups control network access; IAM roles grant AWS permissions. An open website port does not authorize secret retrieval.
+- **EC2 instance profiles:** an instance profile associates an IAM role with EC2 so the application can use temporary role credentials.
+- **Secrets Manager authorization:** knowing a secret's name is not permission to read its value; the application needs the appropriate AWS authorization.
+- **Public subnet/public IP vs actual application reachability:** routing and a public address are only part of the path. Network rules and a listening, functioning application must also permit the request.
+- **AMIs are Regional:** an image must be available in the Region where it will be used to launch an instance.
+- **Copying an AMI across Regions:** copying `CafeServer` from N. Virginia to Oregon made the image available for the destination launch.
+- **Region-specific supporting resources/configuration:** copying the image does not automatically recreate external secrets, networking, or all destination settings. Check the target Region and application address.
+- **Development vs production:** development is the practice environment; production is the intended customer environment. A production name does not make classroom security shortcuts suitable for real use.
+
+**記憶：能連線、能取得 AWS 權限、能正確執行應用程式，是不同的檢查。**
+
+### 3. 🧒 3rd-Grade Understanding Check
+
+| What happened | Explain it simply |
+| --- | --- |
+| Virginia development environment | The practice café |
+| AMI | The café blueprint/recipe |
+| Copying the AMI to Oregon | Sending the recipe to another city |
+| Oregon production server | A new real café |
+| Security Group | The security guard controlling network doors |
+| IAM Role | The employee's AWS permission badge |
+| Secrets Manager | The locked safe |
+
+The recipe helps build another café, but the new café still needs its doors, employee permission badge, safe, and correct local settings. **食譜送到另一個城市，不代表所有設備與權限都自動準備好了。**
+
+**Today's understanding check: PASS.**
+
+### 4. What AWS Academy Prepared for Me
+
+AWS Academy supplied or preconfigured classroom prerequisites that would not automatically exist in a personal AWS account:
+
+- Classroom VPC/subnets.
+- The Lab IDE.
+- Application files/scripts.
+- Lab IAM resources such as `CafeRole`.
+- Controlled lab permissions.
+- Supporting setup for the classroom workflow.
+
+**These notes are a Class Lab Record, not a guaranteed from-scratch runbook for a personal AWS account.**
+
+**這是課堂操作紀錄；個人 AWS 帳號需要另外建立與確認前置資源。** Do not assume a new personal account contains the classroom's named resources or permissions.
+
+### 5. Personal AWS Rebuild Decision
+
+**🟢 YES — High learning value**
+
+This lab is worth rebuilding because it combines networking, EC2, IAM, Secrets Manager, AMIs, and multi-Region concepts. AWS Academy prepared or hid many prerequisites; recreating them would make their purpose and dependencies clearer. This decision records learning value, not authorization to provision resources now.
+
+Before rebuilding, evaluate:
+
+| Decision area | What to establish first |
+| --- | --- |
+| Expected AWS cost | Estimate the chosen resources, Regions, runtime, storage, and service usage before provisioning |
+| Security differences | Replace classroom shortcuts with safer access rules and appropriately scoped permissions |
+| Time required | Allow time for prerequisite setup, troubleshooting, verification, and cleanup |
+| Classroom resources to recreate | Identify the network, IDE/access method, application assets, IAM resources, secrets, and supporting setup needed |
+| Cleanup requirements | Inventory everything created and define how to remove it in each Region |
+
+### 6. Follow-up Companion Lab
+
+Planned path: `personal-labs/challenge-lab-05-personal-rebuild.md`
+
+**Planned only; the Personal Rebuild has not been created.** This path is not a link to an existing file.
+
+A future Personal Rebuild must:
+
+- Work without AWS Academy resources.
+- Create prerequisites from scratch.
+- Explain why each resource exists.
+- Use safer real-world defaults where practical.
+- Distinguish classroom shortcuts from real-world recommendations.
+- Include cost checkpoints before provisioning and as the deployment grows.
+- Include a complete cleanup procedure.
+
+### 7. Cleanup Check
+
+Personal Rebuild labs must explicitly check for billable resources before declaring the lab complete. Review **every Region used**, including EC2 instances, EBS volumes/snapshots, AMIs and their backing snapshots, Secrets Manager secrets, and any other created resources. Record the cleanup outcome and any intentionally retained resources with their ongoing cost implications; do not assume stopping an instance or removing an AMI clears all related resources.
+
+**Today's checkpoint does not claim that a resource cleanup audit was performed.** No Personal Rebuild resources were created as part of this documentation update. Future cleanup reviews must record evidence rather than infer cleanup from the end of a classroom session.
+
+**清理完成前，逐一檢查所有使用過的 Region 與可能持續計費的資源。**
+
+Class Lab -> Documentation -> SAA Review -> 3rd-Grade Check -> Personal Rebuild Decision -> Cleanup Review
+
+上課 Lab -> 文件化 -> SAA 複習 -> 三年級理解檢查 -> Personal Rebuild 判斷 -> Cleanup 檢查
