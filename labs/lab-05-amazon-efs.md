@@ -205,3 +205,111 @@ CloudWatch's approximately **121.8 MB/s** can differ from fio's approximately **
 - **Sum** aggregates values across the selected period. **Throughput = bytes / seconds**; one minute means divide by **60**.
 
 > **Before big writes -> df -hT -> verify nfs4 -> then run workload.**
+
+## Lab Completion Checkpoint / Lab 結束檢查點
+
+This checkpoint applies the standard end-of-lab workflow retroactively to Lab 05 Amazon EFS. It evaluates the work recorded above without adding new lab steps or changing the observations.
+
+### 1. Class Lab Complete
+
+| Check | Lab record |
+| --- | --- |
+| Lab completed successfully | Yes — EFS mounted, verified, and exercised with fio; CloudWatch write activity reviewed |
+| Important troubleshooting captured | Yes — an unmounted directory redirected fio writes to the local root disk |
+| Full notes documented | Yes |
+| Cheat sheet documented | Yes |
+| GitHub documentation | Already committed/pushed before this checkpoint update |
+
+The recorded recovery included removing the accidental local file, remounting EFS, verifying `nfs4` at the expected mount location, and only then rerunning fio. This completion record does not imply that cloud-resource cleanup was verified.
+
+### 2. SAA Takeaways
+
+- **EFS vs EBS vs S3:** EFS provides shared network file storage, EBS provides block storage, and S3 provides object storage.
+- **EC2-to-EFS networking:** mount targets provide network access to EFS in the VPC. Security groups must permit the client-to-mount-target NFS traffic.
+- **NFSv4.1 / TCP 2049:** this lab used NFSv4.1; the EFS NFS destination port is TCP 2049.
+- **Linux mounting and verification:** a local directory can exist without a remote mount. Check the EFS source, `nfs4` type, and exact mount location with `df -hT` before large writes.
+- **Elastic capacity:** the large `8.0E` display is not preallocated storage or a throughput guarantee.
+- **fio vs CloudWatch:** fio is a storage benchmark tool; CloudWatch records AWS metrics. A benchmark result alone does not prove the write destination was EFS.
+- **Capacity vs activity:** `PermittedThroughput` describes permitted throughput; `DataWriteIOBytes` describes write bytes. `Sum` over one minute gives the period's write-byte total; divide by 60 for its average bytes/second.
+- **Measurement windows:** fio and CloudWatch can report different rates because their measurement intervals differ. Preserve the recorded results without treating the difference as an error.
+
+> **Before big writes -> df -hT -> verify nfs4 -> then run workload.**
+>
+> **資料夾存在不代表 EFS 已掛載；大量寫入前，先確認資料真正寫到哪裡。**
+
+### 3. 🧒 3rd-Grade Understanding Check
+
+| Concept | Explain it simply |
+| --- | --- |
+| EC2 | The student's backpack/computer |
+| EFS | The shared classroom bookshelf |
+| Mount | Connecting the backpack folder to the bookshelf |
+| Mount Target | The library door |
+| Security Group | The security guard |
+| TCP 2049 | The special NFS door number |
+| fio | The fast student carrying boxes |
+| CloudWatch | The teacher measuring activity |
+
+If the backpack folder is not connected to the bookshelf, the boxes stay in the backpack and can fill it up. The folder's label does not prove the connection exists. `df -hT` helps check that the folder really reaches the shared bookshelf before the student carries more boxes.
+
+**理解重點：先確認書包資料夾連到共享書架，再搬大量箱子。** The operational check is to explain why an existing directory is insufficient and identify the expected `nfs4` mount before writing.
+
+### 4. What AWS Academy Prepared for Me
+
+The recorded work took place in an AWS Academy classroom environment with controlled access and lab prerequisites. A personal account must independently provide the network, EC2 client, access permissions, and supporting setup that the classroom workflow relied on.
+
+The existing notes identify the EFS file system and EC2 client but do not establish exactly which underlying resources were precreated versus configured during the lab. Do not assume a personal account already contains the classroom's VPC/subnets, client instance, security groups, or Session Manager prerequisites. The recorded `amazon-efs-utils` installation remains a step we performed, not a claimed preinstalled classroom component.
+
+**These notes are a Class Lab Record, not a guaranteed from-scratch runbook for a personal AWS account.**
+
+**這是課堂操作紀錄；個人帳號的網路、主機、權限與連線方式需要自行建立及驗證。**
+
+### 5. Personal AWS Rebuild Decision
+
+**🟢 YES — Medium Priority**
+
+This lab is worth rebuilding in a personal AWS account because it provides hands-on practice with EFS, EC2-to-EFS networking, mount targets, Security Groups, NFS/TCP 2049, Linux mounting and verification, and CloudWatch EFS metrics.
+
+The accidental local-disk-full incident is an especially valuable operational lesson: a mount-point directory can exist even when EFS is not mounted. Run `df -hT` and verify `nfs4` at the intended mount location before large writes. A future exercise should teach this failure safely rather than require filling the root disk.
+
+The rebuild is **Medium Priority** because its architecture is narrower than Challenge Lab 05 Café. It remains valuable as a focused storage and troubleshooting exercise. This is a learning decision, not a request to provision resources now.
+
+Before rebuilding, evaluate:
+
+| Decision area | What to establish first |
+| --- | --- |
+| Expected AWS cost | Estimate EC2 runtime, EBS storage, EFS storage/throughput, and any additional networking or monitoring resources chosen |
+| Security differences | Scope NFS access to the intended client; choose an appropriate administration method and review encryption and permissions |
+| Time required | Allow time for prerequisites, mount verification, bounded test writes, metric collection, and cleanup |
+| Classroom resources to recreate | Plan the VPC/subnets, connectivity, security groups, EC2 client, access prerequisites, EFS file system, and mount targets |
+| Cleanup requirements | Inventory all created resources and define removal and verification steps before provisioning |
+
+### 6. Follow-up Companion Lab
+
+Planned path: `personal-labs/lab-05-amazon-efs-personal-rebuild.md`
+
+**Planned only; the Personal Rebuild has not been created.** This path is not a link to an existing file.
+
+A future Personal Rebuild must:
+
+- Work without AWS Academy resources.
+- Create the necessary prerequisites in a personal AWS account from scratch.
+- Explain why each resource exists and how the client reaches EFS.
+- Use safer real-world defaults where practical and distinguish classroom shortcuts from recommendations.
+- Include cost and security checkpoints before provisioning and before running workloads.
+- Use bounded test data and verify the mount before writing.
+- Include complete cleanup instructions and a final resource audit.
+
+### 7. Cleanup Check
+
+Before declaring a Personal Rebuild complete, explicitly review all resources created in every Region used: EC2 instances, EBS volumes and any snapshots, the EFS file system and mount targets, any EFS backups, and any additional networking, monitoring, or supporting resources. Record deletion results and any intentionally retained resources with their ongoing cost implications.
+
+Removing the fio test file is not the same as removing the lab infrastructure. Stopping EC2 is not a complete cleanup procedure; storage and other retained resources still need review.
+
+**This retroactive checkpoint does not claim that cloud-resource cleanup was performed.** The existing record confirms local test-file cleanup and recovery, not a final inventory of remaining AWS resources. No Personal Rebuild resources were created by this documentation update.
+
+**清除測試檔案不等於清除全部 AWS 資源；完成前要逐項檢查。**
+
+Class Lab -> Documentation -> SAA Review -> 3rd-Grade Check -> Personal Rebuild Decision -> Cleanup Review
+
+上課 Lab -> 文件化 -> SAA 複習 -> 三年級理解檢查 -> Personal Rebuild 判斷 -> Cleanup 檢查
