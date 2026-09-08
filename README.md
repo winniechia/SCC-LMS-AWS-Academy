@@ -25,3 +25,11 @@ These are plans for independent learning, separate from completed classroom labs
 | Companion | Status |
 | --- | --- |
 | [Lab 06 RDS companion plan](personal-labs/lab-06-rds-companion-plan.md) | 🟢 Yes — High Learning Value; planned only, not built |
+
+## Knowledge Checks
+
+Concept summaries and learning corrections from completed study sessions; these do not reproduce the quizzes verbatim.
+
+| Module | Study notes | Quick review |
+| --- | --- | --- |
+| Module 5 — EC2 and storage concepts | [Module 5 Knowledge Check](knowledge-checks/module-05-knowledge-check.md) | [Module 5 cheat sheet](cheat-sheets/module-05-knowledge-check-cheat-sheet.md) |
