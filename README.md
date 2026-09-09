@@ -35,3 +35,4 @@ Concept summaries and learning corrections from completed study sessions; these 
 | Module | Study notes | Quick review |
 | --- | --- | --- |
 | Module 5 — EC2 and storage concepts | [Module 5 Knowledge Check](knowledge-checks/module-05-knowledge-check.md) | [Module 5 cheat sheet](cheat-sheets/module-05-knowledge-check-cheat-sheet.md) |
+| Module 6 — Database concepts | [Module 6 Knowledge Check](knowledge-checks/module-06-knowledge-check.md) | [Module 6 cheat sheet](cheat-sheets/module-06-knowledge-check-cheat-sheet.md) |
