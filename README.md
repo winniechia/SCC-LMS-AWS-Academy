@@ -10,6 +10,7 @@ Hands-on AWS Academy / AWS Solutions Architect study notes, with English and Tra
 | Challenge Lab 05 — Creating a Dynamic Website for the Café | [Café challenge notes](labs/challenge-lab-05-dynamic-cafe-website.md) | [Café challenge cheat sheet](cheat-sheets/challenge-lab-05-dynamic-cafe-website-cheat-sheet.md) |
 | Lab 06 — Creating an Amazon RDS Database | [Lab 06 notes](labs/lab-06-amazon-rds.md) | [Lab 06 cheat sheet](cheat-sheets/lab-06-amazon-rds-cheat-sheet.md) |
 | Lab 6 Challenge Lab — Migrating a Database to Amazon RDS | [Migration notes](labs/challenge-lab-06-migrating-database-to-amazon-rds.md) | [Migration cheat sheet](cheat-sheets/challenge-lab-06-migrating-database-to-amazon-rds-cheat-sheet.md) |
+| Lab 07 — Creating a VPC | [Lab 07 notes](labs/lab-07-creating-a-vpc.md) | [Lab 07 cheat sheet](cheat-sheets/lab-07-creating-a-vpc-cheat-sheet.md) |
 
 The Amazon EFS lab and the café challenge are separate Lab 05 activities. The full notes preserve the supplied work and troubleshooting lessons; the compact cheat sheets support printing and exam review.
 
@@ -19,6 +20,8 @@ The Amazon EFS lab and the café challenge are separate Lab 05 activities. The f
 
 > **Secrets Manager is the KEY BOX, not the HALLWAY. / Secrets Manager 是鑰匙箱，不是走廊。**
 
+> **Public IP = address. Route = road. IGW = outside gate. / Public IP 是門牌；Route 是道路；IGW 是對外大門。**
+
 ## Personal companion labs
 
 These are plans for independent learning, separate from completed classroom labs.
@@ -27,6 +30,7 @@ These are plans for independent learning, separate from completed classroom labs
 | --- | --- |
 | [Lab 06 RDS companion plan](personal-labs/lab-06-rds-companion-plan.md) | 🟢 Yes — High Learning Value; planned only, not built |
 | [Challenge Lab 06 café migration — future SAA rebuild plan](personal-labs/challenge-lab-06-rds-migration-companion-plan.md) | 🟢 Yes — High Priority / High Learning Value; from scratch with ChatGPT guidance, no AWS Academy pre-lab setup; plan only |
+| [Lab 07 VPC companion plan](personal-labs/lab-07-vpc-companion-plan.md) | 🟢 Yes — Very High Priority / Very High Learning Value; from scratch, plan only |
 
 ## Knowledge Checks
 
