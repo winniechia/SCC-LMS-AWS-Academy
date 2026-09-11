@@ -11,6 +11,7 @@ Hands-on AWS Academy / AWS Solutions Architect study notes, with English and Tra
 | Lab 06 — Creating an Amazon RDS Database | [Lab 06 notes](labs/lab-06-amazon-rds.md) | [Lab 06 cheat sheet](cheat-sheets/lab-06-amazon-rds-cheat-sheet.md) |
 | Lab 6 Challenge Lab — Migrating a Database to Amazon RDS | [Migration notes](labs/challenge-lab-06-migrating-database-to-amazon-rds.md) | [Migration cheat sheet](cheat-sheets/challenge-lab-06-migrating-database-to-amazon-rds-cheat-sheet.md) |
 | Lab 07 — Creating a VPC | [Lab 07 notes](labs/lab-07-creating-a-vpc.md) | [Lab 07 cheat sheet](cheat-sheets/lab-07-creating-a-vpc-cheat-sheet.md) |
+| Challenge Lab 07 — VPC Networking, Bastion, NAT, and NACL | [Challenge Lab 07 notes](labs/challenge-lab-07-vpc-networking.md) | [Challenge Lab 07 cheat sheet](cheat-sheets/challenge-lab-07-vpc-networking-cheat-sheet.md) |
 
 The Amazon EFS lab and the café challenge are separate Lab 05 activities. The full notes preserve the supplied work and troubleshooting lessons; the compact cheat sheets support printing and exam review.
 
@@ -22,6 +23,8 @@ The Amazon EFS lab and the café challenge are separate Lab 05 activities. The f
 
 > **Public IP = address. Route = road. IGW = outside gate. / Public IP 是門牌；Route 是道路；IGW 是對外大門。**
 
+> **Bastion = people go IN. NAT = Private EC2 goes OUT. / Bastion = 人進去；NAT = Private EC2 出去。**
+
 ## Personal companion labs
 
 These are plans for independent learning, separate from completed classroom labs.
@@ -31,6 +34,7 @@ These are plans for independent learning, separate from completed classroom labs
 | [Lab 06 RDS companion plan](personal-labs/lab-06-rds-companion-plan.md) | 🟢 Yes — High Learning Value; planned only, not built |
 | [Challenge Lab 06 café migration — future SAA rebuild plan](personal-labs/challenge-lab-06-rds-migration-companion-plan.md) | 🟢 Yes — High Priority / High Learning Value; from scratch with ChatGPT guidance, no AWS Academy pre-lab setup; plan only |
 | [Lab 07 VPC companion plan](personal-labs/lab-07-vpc-companion-plan.md) | 🟢 Yes — Very High Priority / Very High Learning Value; from scratch, plan only |
+| [Challenge Lab 07 VPC networking companion plan](personal-labs/challenge-lab-07-vpc-networking-companion-plan.md) | 🟢 Yes — Very High Priority / Very High Learning Value; rebuild from scratch in personal AWS without Academy pre-lab setup; plan only |
 
 ## Knowledge Checks
 
