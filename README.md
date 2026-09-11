@@ -12,6 +12,7 @@ Hands-on AWS Academy / AWS Solutions Architect study notes, with English and Tra
 | Lab 6 Challenge Lab — Migrating a Database to Amazon RDS | [Migration notes](labs/challenge-lab-06-migrating-database-to-amazon-rds.md) | [Migration cheat sheet](cheat-sheets/challenge-lab-06-migrating-database-to-amazon-rds-cheat-sheet.md) |
 | Lab 07 — Creating a VPC | [Lab 07 notes](labs/lab-07-creating-a-vpc.md) | [Lab 07 cheat sheet](cheat-sheets/lab-07-creating-a-vpc-cheat-sheet.md) |
 | Challenge Lab 07 — VPC Networking, Bastion, NAT, and NACL | [Challenge Lab 07 notes](labs/challenge-lab-07-vpc-networking.md) | [Challenge Lab 07 cheat sheet](cheat-sheets/challenge-lab-07-vpc-networking-cheat-sheet.md) |
+| Lab 08 — Creating a VPC Peering Connection | [Lab 08 notes](labs/lab-08-vpc-peering.md) | [Lab 08 cheat sheet](cheat-sheets/lab-08-vpc-peering-cheat-sheet.md) |
 
 The Amazon EFS lab and the café challenge are separate Lab 05 activities. The full notes preserve the supplied work and troubleshooting lessons; the compact cheat sheets support printing and exam review.
 
@@ -25,6 +26,8 @@ The Amazon EFS lab and the café challenge are separate Lab 05 activities. The f
 
 > **Bastion = people go IN. NAT = Private EC2 goes OUT. / Bastion = 人進去；NAT = Private EC2 出去。**
 
+> **Peering = bridge. Route = road sign. Flow Logs = traffic evidence. / Peering = 橋；Route = 路牌；Flow Logs = 車流證據。**
+
 ## Personal companion labs
 
 These are plans for independent learning, separate from completed classroom labs.
@@ -35,6 +38,7 @@ These are plans for independent learning, separate from completed classroom labs
 | [Challenge Lab 06 café migration — future SAA rebuild plan](personal-labs/challenge-lab-06-rds-migration-companion-plan.md) | 🟢 Yes — High Priority / High Learning Value; from scratch with ChatGPT guidance, no AWS Academy pre-lab setup; plan only |
 | [Lab 07 VPC companion plan](personal-labs/lab-07-vpc-companion-plan.md) | 🟢 Yes — Very High Priority / Very High Learning Value; from scratch, plan only |
 | [Challenge Lab 07 VPC networking companion plan](personal-labs/challenge-lab-07-vpc-networking-companion-plan.md) | 🟢 Yes — Very High Priority / Very High Learning Value; rebuild from scratch in personal AWS without Academy pre-lab setup; plan only |
+| [Lab 08 VPC peering companion plan](personal-labs/lab-08-vpc-peering-companion-plan.md) | 🟢 Yes — Very High Priority / Very High Learning Value; recreate Academy prerequisites from scratch and use the newest AWS Console GUI available at rebuild time; plan only |
 
 ## Knowledge Checks
 
