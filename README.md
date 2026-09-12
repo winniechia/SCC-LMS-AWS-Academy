@@ -13,6 +13,7 @@ Hands-on AWS Academy / AWS Solutions Architect study notes, with English and Tra
 | Lab 07 — Creating a VPC | [Lab 07 notes](labs/lab-07-creating-a-vpc.md) | [Lab 07 cheat sheet](cheat-sheets/lab-07-creating-a-vpc-cheat-sheet.md) |
 | Challenge Lab 07 — VPC Networking, Bastion, NAT, and NACL | [Challenge Lab 07 notes](labs/challenge-lab-07-vpc-networking.md) | [Challenge Lab 07 cheat sheet](cheat-sheets/challenge-lab-07-vpc-networking-cheat-sheet.md) |
 | Lab 08 — Creating a VPC Peering Connection | [Lab 08 notes](labs/lab-08-vpc-peering.md) | [Lab 08 cheat sheet](cheat-sheets/lab-08-vpc-peering-cheat-sheet.md) |
+| Lab 09 — Securing Applications with Amazon Cognito | [Lab 09 notes](labs/lab-09-amazon-cognito.md) | [Lab 09 cheat sheet](cheat-sheets/lab-09-amazon-cognito-cheat-sheet.md) |
 
 The Amazon EFS lab and the café challenge are separate Lab 05 activities. The full notes preserve the supplied work and troubleshooting lessons; the compact cheat sheets support printing and exam review.
 
@@ -28,6 +29,8 @@ The Amazon EFS lab and the café challenge are separate Lab 05 activities. The f
 
 > **Peering = bridge. Route = road sign. Flow Logs = traffic evidence. / Peering = 橋；Route = 路牌；Flow Logs = 車流證據。**
 
+> **User Pool = authentication. Identity Pool = temporary AWS credentials. IAM Role/Policy = AWS authorization. / User Pool = 驗證身分；Identity Pool = 臨時 AWS 憑證；IAM Role/Policy = AWS 資源授權。**
+
 ## Personal companion labs
 
 These are plans for independent learning, separate from completed classroom labs.
@@ -39,6 +42,7 @@ These are plans for independent learning, separate from completed classroom labs
 | [Lab 07 VPC companion plan](personal-labs/lab-07-vpc-companion-plan.md) | 🟢 Yes — Very High Priority / Very High Learning Value; from scratch, plan only |
 | [Challenge Lab 07 VPC networking companion plan](personal-labs/challenge-lab-07-vpc-networking-companion-plan.md) | 🟢 Yes — Very High Priority / Very High Learning Value; rebuild from scratch in personal AWS without Academy pre-lab setup; plan only |
 | [Lab 08 VPC peering companion plan](personal-labs/lab-08-vpc-peering-companion-plan.md) | 🟢 Yes — Very High Priority / Very High Learning Value; recreate Academy prerequisites from scratch and use the newest AWS Console GUI available at rebuild time; plan only |
+| [Lab 09 Cognito companion plan](personal-labs/lab-09-amazon-cognito-companion-plan.md) | 🟢 Yes — High Learning Value; rebuild identity architecture from scratch without Academy pre-created resources, using the newest AWS Console GUI available at rebuild time; plan only |
 
 ## Knowledge Checks
 
