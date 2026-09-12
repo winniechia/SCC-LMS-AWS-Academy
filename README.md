@@ -58,3 +58,4 @@ Concept summaries and learning corrections from completed study sessions; these 
 | Module 6 — Database concepts | [Module 6 Knowledge Check](knowledge-checks/module-06-knowledge-check.md) | [Module 6 cheat sheet](cheat-sheets/module-06-knowledge-check-cheat-sheet.md) |
 | Module 7 — VPC networking concepts | [Module 7 Knowledge Check](knowledge-checks/module-07-knowledge-check.md) | [Module 7 cheat sheet](cheat-sheets/module-07-knowledge-check-cheat-sheet.md) |
 | Module 8 — Hybrid and multi-VPC networking | [Module 8 Knowledge Check](knowledge-checks/module-08-knowledge-check.md) | [Module 8 cheat sheet](cheat-sheets/module-08-knowledge-check-cheat-sheet.md) |
+| Module 9 — Identity, multi-account governance, encryption, and sensitive-data protection | [Module 9 Knowledge Check](knowledge-checks/module-09-knowledge-check.md) | [Module 9 cheat sheet](cheat-sheets/module-09-knowledge-check-cheat-sheet.md) |
