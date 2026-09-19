@@ -15,6 +15,7 @@ Hands-on AWS Academy / AWS Solutions Architect study notes, with English and Tra
 | Lab 08 — Creating a VPC Peering Connection | [Lab 08 notes](labs/lab-08-vpc-peering.md) | [Lab 08 cheat sheet](cheat-sheets/lab-08-vpc-peering-cheat-sheet.md) |
 | Lab 09 — Securing Applications with Amazon Cognito | [Lab 09 Cognito notes](labs/lab-09-amazon-cognito.md) | [Lab 09 Cognito cheat sheet](cheat-sheets/lab-09-amazon-cognito-cheat-sheet.md) |
 | Lab 09 — Encrypting Data at Rest with AWS Encryption Options | [Lab 09 encryption notes](labs/lab-09-encryption-at-rest.md) | [Lab 09 encryption cheat sheet](cheat-sheets/lab-09-encryption-at-rest-cheat-sheet.md) |
+| Lab 10 — Creating a Highly Available Environment | [Lab 10 notes](labs/lab-10-creating-a-highly-available-environment.md) | [Lab 10 cheat sheet](cheat-sheets/lab-10-high-availability-cheat-sheet.md) |
 
 The Amazon EFS lab and the café challenge are separate Lab 05 activities. The full notes preserve the supplied work and troubleshooting lessons; the compact cheat sheets support printing and exam review.
 
@@ -47,6 +48,7 @@ These are plans for independent learning, separate from completed classroom labs
 | [Lab 08 VPC peering companion plan](personal-labs/lab-08-vpc-peering-companion-plan.md) | 🟢 Yes — Very High Priority / Very High Learning Value; recreate Academy prerequisites from scratch and use the newest AWS Console GUI available at rebuild time; plan only |
 | [Lab 09 Cognito companion plan](personal-labs/lab-09-amazon-cognito-companion-plan.md) | 🟢 Yes — High Learning Value; rebuild identity architecture from scratch without Academy pre-created resources, using the newest AWS Console GUI available at rebuild time; plan only |
 | [Lab 09 encryption-at-rest companion plan](personal-labs/lab-09-encryption-at-rest-companion-plan.md) | 🟢 Yes — Very High Learning Value; rebuild S3/KMS/EC2/encrypted-EBS/CloudTrail architecture from zero using the newest AWS Console GUI available at rebuild time; plan only |
+| [Lab 10 high-availability companion plan](personal-labs/lab-10-high-availability-companion-plan.md) | 🟢 Yes — Very High Learning Value; rebuild the full HA architecture from zero and understand every dependency; plan only |
 
 ## Knowledge Checks
 
