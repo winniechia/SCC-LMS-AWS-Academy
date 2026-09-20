@@ -17,6 +17,7 @@ Hands-on AWS Academy / AWS Solutions Architect study notes, with English and Tra
 | Lab 09 — Encrypting Data at Rest with AWS Encryption Options | [Lab 09 encryption notes](labs/lab-09-encryption-at-rest.md) | [Lab 09 encryption cheat sheet](cheat-sheets/lab-09-encryption-at-rest-cheat-sheet.md) |
 | Lab 10 — Creating a Highly Available Environment | [Lab 10 notes](labs/lab-10-creating-a-highly-available-environment.md) | [Lab 10 cheat sheet](cheat-sheets/lab-10-high-availability-cheat-sheet.md) |
 | Challenge Lab 10 — Creating a Scalable and Highly Available Environment | [Challenge Lab 10 notes](labs/challenge-lab-10-scalable-highly-available-environment.md) | [Challenge Lab 10 cheat sheet](cheat-sheets/challenge-lab-10-scalable-highly-available-environment-cheat-sheet.md) |
+| Lab 11 — Automating Infrastructure Deployment with AWS CloudFormation | [Lab 11 notes](labs/lab-11-cloudformation.md) | [Lab 11 cheat sheet](cheat-sheets/lab-11-cloudformation-cheat-sheet.md) |
 
 The Amazon EFS lab and the café challenge are separate Lab 05 activities. The full notes preserve the supplied work and troubleshooting lessons; the compact cheat sheets support printing and exam review.
 
@@ -38,6 +39,8 @@ The Amazon EFS lab and the café challenge are separate Lab 05 activities. The f
 
 > **HA = survive failure. Scaling = change capacity with demand. / HA = 故障時仍能服務；Scaling = 隨需求增減容量。**
 
+> **Template = blueprint. CloudFormation = construction team. Stack = managed build. / Template = 施工圖；CloudFormation = 施工隊；Stack = 被管理的一整組建築。**
+
 ## Personal companion labs
 
 These are plans for independent learning, separate from completed classroom labs.
@@ -52,6 +55,7 @@ These are plans for independent learning, separate from completed classroom labs
 | [Lab 09 Cognito companion plan](personal-labs/lab-09-amazon-cognito-companion-plan.md) | 🟢 Yes — High Learning Value; rebuild identity architecture from scratch without Academy pre-created resources, using the newest AWS Console GUI available at rebuild time; plan only |
 | [Lab 09 encryption-at-rest companion plan](personal-labs/lab-09-encryption-at-rest-companion-plan.md) | 🟢 Yes — Very High Learning Value; rebuild S3/KMS/EC2/encrypted-EBS/CloudTrail architecture from zero using the newest AWS Console GUI available at rebuild time; plan only |
 | [Lab 10 high-availability companion plan](personal-labs/lab-10-high-availability-companion-plan.md) | 🟢 Yes — Very High Learning Value; rebuild the full HA architecture from zero and understand every dependency; plan only |
+| [Lab 11 CloudFormation companion plan](personal-labs/lab-11-cloudformation-companion-plan.md) | 🟢 Yes — High Learning Value; write layered CloudFormation templates from zero; plan only |
 
 ## Knowledge Checks
 
