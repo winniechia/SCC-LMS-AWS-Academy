@@ -16,6 +16,7 @@ Hands-on AWS Academy / AWS Solutions Architect study notes, with English and Tra
 | Lab 09 — Securing Applications with Amazon Cognito | [Lab 09 Cognito notes](labs/lab-09-amazon-cognito.md) | [Lab 09 Cognito cheat sheet](cheat-sheets/lab-09-amazon-cognito-cheat-sheet.md) |
 | Lab 09 — Encrypting Data at Rest with AWS Encryption Options | [Lab 09 encryption notes](labs/lab-09-encryption-at-rest.md) | [Lab 09 encryption cheat sheet](cheat-sheets/lab-09-encryption-at-rest-cheat-sheet.md) |
 | Lab 10 — Creating a Highly Available Environment | [Lab 10 notes](labs/lab-10-creating-a-highly-available-environment.md) | [Lab 10 cheat sheet](cheat-sheets/lab-10-high-availability-cheat-sheet.md) |
+| Challenge Lab 10 — Creating a Scalable and Highly Available Environment | [Challenge Lab 10 notes](labs/challenge-lab-10-scalable-highly-available-environment.md) | [Challenge Lab 10 cheat sheet](cheat-sheets/challenge-lab-10-scalable-highly-available-environment-cheat-sheet.md) |
 
 The Amazon EFS lab and the café challenge are separate Lab 05 activities. The full notes preserve the supplied work and troubleshooting lessons; the compact cheat sheets support printing and exam review.
 
@@ -34,6 +35,8 @@ The Amazon EFS lab and the café challenge are separate Lab 05 activities. The f
 > **User Pool = authentication. Identity Pool = temporary AWS credentials. IAM Role/Policy = AWS authorization. / User Pool = 驗證身分；Identity Pool = 臨時 AWS 憑證；IAM Role/Policy = AWS 資源授權。**
 
 > **KMS protects the key that protects the data. CloudTrail records the activity. / KMS 保護用來保護資料的鑰匙；CloudTrail 記錄操作。**
+
+> **HA = survive failure. Scaling = change capacity with demand. / HA = 故障時仍能服務；Scaling = 隨需求增減容量。**
 
 ## Personal companion labs
 
