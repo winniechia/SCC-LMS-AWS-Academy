@@ -18,6 +18,7 @@ Hands-on AWS Academy / AWS Solutions Architect study notes, with English and Tra
 | Lab 10 — Creating a Highly Available Environment | [Lab 10 notes](labs/lab-10-creating-a-highly-available-environment.md) | [Lab 10 cheat sheet](cheat-sheets/lab-10-high-availability-cheat-sheet.md) |
 | Challenge Lab 10 — Creating a Scalable and Highly Available Environment | [Challenge Lab 10 notes](labs/challenge-lab-10-scalable-highly-available-environment.md) | [Challenge Lab 10 cheat sheet](cheat-sheets/challenge-lab-10-scalable-highly-available-environment-cheat-sheet.md) |
 | Lab 11 — Automating Infrastructure Deployment with AWS CloudFormation | [Lab 11 notes](labs/lab-11-cloudformation.md) | [Lab 11 cheat sheet](cheat-sheets/lab-11-cloudformation-cheat-sheet.md) |
+| Challenge Lab 11 — Automating Infrastructure Deployment | [Challenge Lab 11 notes](labs/challenge-lab-11-automating-infrastructure-deployment.md) | [Challenge Lab 11 cheat sheet](cheat-sheets/challenge-lab-11-automating-infrastructure-deployment-cheat-sheet.md) |
 
 The Amazon EFS lab and the café challenge are separate Lab 05 activities. The full notes preserve the supplied work and troubleshooting lessons; the compact cheat sheets support printing and exam review.
 
@@ -40,6 +41,8 @@ The Amazon EFS lab and the café challenge are separate Lab 05 activities. The f
 > **HA = survive failure. Scaling = change capacity with demand. / HA = 故障時仍能服務；Scaling = 隨需求增減容量。**
 
 > **Template = blueprint. CloudFormation = construction team. Stack = managed build. / Template = 施工圖；CloudFormation = 施工隊；Stack = 被管理的一整組建築。**
+>
+> **Parameter = deployment choice. Mapping = lookup table. Export/ImportValue = stack-to-stack handoff. / Parameter = 部署時選擇；Mapping = 對照表；Export/ImportValue = stack 之間交接資訊。**
 
 ## Personal companion labs
 
