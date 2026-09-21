@@ -8,9 +8,9 @@
 
 ## Decision
 
-**🟢 Yes — High Learning Value**
+**🟢 Yes — Very High Learning Value**
 
-AWS Academy supplied the CloudFormation templates in the guided lab. The personal rebuild should therefore test the missing skill: **design and write the infrastructure templates from zero**, without copying the Academy templates.
+AWS Academy supplied the CloudFormation templates in the guided lab, while the Challenge Lab added hands-on template authoring, cross-stack exports/imports, Parameters, Mappings, SSM AMI resolution, UserData, pipeline-driven deployment, and reuse in a second Region. The personal rebuild should therefore test the missing skill: **design the whole workflow from zero**, without relying on Academy-prepared templates, repositories, pipelines, roles, buckets, or temporary infrastructure.
 
 ## Learning goal
 
@@ -31,7 +31,7 @@ Application Stack
 └── Small EC2 instance
 ```
 
-Then update the application stack, review the proposed change, and test deletion/retention behavior.
+Then update the application stack, review the proposed change, test deletion/retention behavior, create an independent source-control/deployment workflow, and deliberately reuse the architecture in a second Region.
 
 ## Phase 0 — Cost and safety
 
@@ -193,3 +193,30 @@ The rebuild is complete only when I can:
 - troubleshoot from Events;
 - explain deletion-policy behavior;
 - remove all temporary personal-lab resources safely.
+
+## Challenge Lab 11 extensions
+
+The personal rebuild should also reproduce the Challenge Lab's important skills without Academy-prepared CI/CD infrastructure:
+
+- add an instance-type Parameter with AllowedValues;
+- add a Region Mapping and explain when a Mapping is appropriate;
+- use `AWS::Region` and `!FindInMap` for Region-aware behavior;
+- resolve an AMI through an SSM public parameter instead of hard-coding an AMI ID;
+- bootstrap a small application with UserData;
+- create a source-control + deployment pipeline independently;
+- deploy the network and application into a second Region using the same templates;
+- verify which values/resources are Region-scoped;
+- distinguish template portability from replication/failover;
+- use Git history for definition changes and CloudFormation Events for deployment evidence;
+- clean up resources in every Region used by the rebuild.
+
+### Exam-reading checkpoint
+
+A minimal S3 bucket resource **inside** the `Resources` section is two lines:
+
+```yaml
+S3Bucket:
+  Type: AWS::S3::Bucket
+```
+
+Do not count the `Resources:` section heading when a question specifically asks for the lines that define the resource inside that section.
