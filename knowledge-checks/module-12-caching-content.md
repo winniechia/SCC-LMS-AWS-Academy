@@ -2,9 +2,11 @@
 
 ## Status
 
-**Student Guide review in progress**
+**Knowledge Check: Completed and reviewed**
 
-These notes capture the concepts reviewed so far from Module 12 **Caching Content**. They summarize the learning and corrections rather than reproduce the questions verbatim.
+These notes capture the concepts reviewed from the Module 12 **Caching Content Knowledge Check**. They summarize the learning and corrections rather than reproduce the questions verbatim.
+
+**There is no Lab 12 hands-on activity in the material available for this study sequence; Module 12 documentation is Knowledge Check only.**
 
 ---
 
