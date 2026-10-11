@@ -37,3 +37,7 @@ Confirmed: overall module score totals 220/250; two Securing Access questions mi
 SAA-C03: review IAM user/group/role; identity policies versus SCPs and permission boundaries; Lambda execution environments versus VPC connectivity and CloudFront Functions.
 
 Personal AWS Rebuild checkpoint: Not required for these conceptual questions; optional IAM least-privilege practice may help.
+
+## Course gradebook update — October 11, 2026
+
+After refreshing the Academy course gradebook, the assignment **Academy Cloud Architecting Course Assessment** displayed **100/100**, timestamped **Oct 11 at 12:09am** (as shown in the screenshot). This is the **gradebook assignment score**, not evidence that all 25 assessment questions were answered correctly. Preserve the separate **220/250 (88%)** question-level result and module-by-module review above; the two scores may reflect different grading scales or rules. No explanation of the gradebook calculation was provided.
