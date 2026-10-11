@@ -38,6 +38,8 @@ SAA-C03: review IAM user/group/role; identity policies versus SCPs and permissio
 
 Personal AWS Rebuild checkpoint: Not required for these conceptual questions; optional IAM least-privilege practice may help.
 
-## Course gradebook update — October 11, 2026
+## Final course assessment result — October 11, 2026
 
-After refreshing the Academy course gradebook, the assignment **Academy Cloud Architecting Course Assessment** displayed **100/100**, timestamped **Oct 11 at 12:09am** (as shown in the screenshot). This is the **gradebook assignment score**, not evidence that all 25 assessment questions were answered correctly. Preserve the separate **220/250 (88%)** question-level result and module-by-module review above; the two scores may reflect different grading scales or rules. No explanation of the gradebook calculation was provided.
+After refreshing the AWS Academy gradebook, **Academy Cloud Architecting Course Assessment** displayed **100/100**, timestamped **Oct 11 at 12:09am**. **The learner confirms this final result means all 25 questions were answered correctly (25/25).**
+
+The earlier **220/250 (88%)** module-score screenshot and the Q23 **Incorrect** review are retained above as **historical review evidence from an earlier displayed result**, not the final outcome. The available screenshots do not independently explain the change in scoring; the **25/25 interpretation is the learner's explicit confirmation**. The Q1, Q2, and Q23 sections remain useful as study notes, not as claims of errors in the final 100/100 result.
