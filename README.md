@@ -6,6 +6,10 @@ Hands-on AWS Academy / AWS Solutions Architect study notes, with English and Tra
 
 - [AWS Academy Capstone — implementation, troubleshooting, Auto Scaling validation, and Love Fills Memory study session](labs/aws-academy-capstone-project.md)
 
+## Future Capstone Personal Rebuild / 未來個人實作
+
+- [LFM-inspired Capstone Companion Lab — step-by-step personal AWS rebuild plan (not yet deployed)](personal-labs/capstone-lfm-architecture-companion-plan.md)
+
 ## Study index
 
 | Lab | Full notes | Quick review |
