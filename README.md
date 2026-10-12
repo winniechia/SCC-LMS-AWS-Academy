@@ -2,6 +2,10 @@
 
 Hands-on AWS Academy / AWS Solutions Architect study notes, with English and Traditional Chinese reminders（繁體中文重點）and simple analogies for review.
 
+## Capstone Project / 期末專案
+
+- [AWS Academy Capstone — implementation, troubleshooting, Auto Scaling validation, and Love Fills Memory study session](labs/aws-academy-capstone-project.md)
+
 ## Study index
 
 | Lab | Full notes | Quick review |
