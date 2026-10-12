@@ -29,6 +29,7 @@ Hands-on AWS Academy / AWS Solutions Architect study notes, with English and Tra
 | Challenge Lab 11 — Automating Infrastructure Deployment | [Challenge Lab 11 notes](labs/challenge-lab-11-automating-infrastructure-deployment.md) | [Challenge Lab 11 cheat sheet](cheat-sheets/challenge-lab-11-automating-infrastructure-deployment-cheat-sheet.md) |
 | Lab 13 — Building Decoupled Applications by Using Amazon SQS | [Lab 13 notes](labs/lab-13-decoupled-applications-sqs.md) | [Lab 13 cheat sheet](cheat-sheets/lab-13-decoupled-applications-sqs-cheat-sheet.md) |
 | Lab 14 — Implementing a Serverless Architecture on AWS | [Lab 14 notes](labs/lab-14-serverless-architecture.md) | [Lab 14 cheat sheet](cheat-sheets/lab-14-serverless-architecture-cheat-sheet.md) |
+| Lab 16 — Configuring Hybrid Storage with S3 File Gateway | [Lab 16 notes](labs/lab-16-storage-gateway.md) | [Lab 16 cheat sheet](cheat-sheets/lab-16-storage-gateway-cheat-sheet.md) |
 | Challenge Lab 14 — Serverless Daily Sales Reporting | [Challenge Lab 14 notes](labs/challenge-lab-14-serverless-reporting.md) | [Challenge Lab 14 cheat sheet](cheat-sheets/challenge-lab-14-serverless-reporting-cheat-sheet.md) |
 | Optional Guided Lab — Breaking a Monolithic Node.js Application into Microservices | [Containerized microservices notes](labs/guided-lab-containerized-microservices.md) | [Containerized microservices cheat sheet](cheat-sheets/guided-lab-containerized-microservices-cheat-sheet.md) |
 
@@ -75,6 +76,7 @@ These are plans for independent learning, separate from completed classroom labs
 | [Lab 11 CloudFormation companion plan](personal-labs/lab-11-cloudformation-companion-plan.md) | 🟢 Yes — High Learning Value; write layered CloudFormation templates from zero; plan only |
 | [Lab 13 decoupled applications companion plan](personal-labs/lab-13-decoupled-applications-sqs-companion-plan.md) | 🟢 Yes — Very High Learning Value; rebuild S3 → SNS → SQS → consumer from zero; plan only |
 | [Lab 14 serverless architecture companion plan](personal-labs/lab-14-serverless-architecture-companion-plan.md) | 🟢 Yes — Very High Learning Value; rebuild S3 → Lambda → DynamoDB Stream → Lambda → SNS from zero; plan only |
+| [Lab 16 Storage Gateway companion plan](personal-labs/lab-16-storage-gateway-companion-plan.md) | 🟢 Yes — Full rebuild planned for later; one image, AWS Credits review, budget alerts, and verified cleanup; not yet deployed |
 | [Challenge Lab 14 serverless reporting companion plan](personal-labs/challenge-lab-14-serverless-reporting-companion-plan.md) | 🟢 Yes — High Learning Value; rebuild private RDS → Lambda reporting → SNS + EventBridge from zero; plan only |
 | [Containerized microservices companion plan](personal-labs/containerized-microservices-companion-plan.md) | 🟢 Yes — Very High Learning Value; rebuild VPC → Docker/ECR → ECS on EC2 → ALB path routing → microservices from zero; plan only |
 
