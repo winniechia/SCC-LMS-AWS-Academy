@@ -205,3 +205,56 @@ CloudFront is a neighborhood pickup counter stocked with popular goods; Global A
 - [x] Identify Global Accelerator from TCP/UDP + static anycast IP / 辨認網路加速。
 - [x] Distinguish DNS failover from endpoint traffic routing / 分辨 DNS 與流量路由。
 - [ ] Review more ambiguous real-exam-style mixed scenarios / 後續挑戰混合情境。
+
+
+## Final review: Shared Responsibility and Well-Architected / 最終複習
+
+> Original formative SAA-style questions discussed on 2026-10-12, not official AWS Academy or certification questions. / 自編練習題，非官方題庫。
+
+### Shared Responsibility Model / 共同責任模型
+
+- **AWS: security OF the cloud / 雲端本身的安全** — physical data centers, hardware, foundational networking and virtualization infrastructure.
+- **Customer: security IN the cloud / 雲端內部的安全** — data, IAM permissions, application security, and relevant resource configurations. Specific responsibilities depend on service type.
+- **EC2:** customer patches the guest OS; AWS maintains underlying physical infrastructure. / EC2 客戶修補 Guest OS。
+- **RDS:** AWS manages the underlying OS and supported managed maintenance; customers still control data, users, permissions, and application/database design. / RDS 底層 OS 由 AWS 管理。
+- **S3:** AWS operates storage infrastructure; customers configure IAM and bucket/object access, including public-access protections. / S3 存取政策由客戶管理。
+- **3rd-grade analogy / 三年級比喻:** AWS is the building owner responsible for the building structure; the tenant must lock their own room and control the keys. / AWS 管大樓結構，房客管自己的門鎖與鑰匙。
+
+**Shared Responsibility practice (4/4 correct):**
+1. Who patches an EC2 guest OS? **B — Customer.** / EC2 Guest OS 由客戶修補。
+2. After migrating MySQL from EC2 to RDS, who patches the underlying OS? **C — AWS.** / RDS 底層 OS 由 AWS 管理。
+3. Who configures S3 bucket policies? **C — Customer.** / S3 Bucket Policy 由客戶設定。
+4. Who maintains AWS data center physical security? **C — AWS.** / 資料中心實體安全由 AWS 負責。
+
+### Well-Architected Framework / 六大支柱
+
+| Pillar | 中文 | Scenario clue / 情境線索 |
+| --- | --- | --- |
+| Operational Excellence | 卓越營運 | CloudFormation, repeatable deployments, automation / 自動化與標準化 |
+| Security | 安全性 | IAM, encryption, least privilege / 權限與加密 |
+| Reliability | 可靠性 | Multi-AZ, fault tolerance, recovery / 跨 AZ 容錯 |
+| Performance Efficiency | 效能效率 | Scale capacity with demand / 依需求調整資源 |
+| Cost Optimization | 成本最佳化 | Right-size, eliminate waste / 降低不必要成本 |
+| Sustainability | 永續性 | Reduce environmental footprint / 減少環境影響 |
+
+**3rd-grade analogy / 三年級比喻:** Running a school: repeatable procedures (Operations), secure gates (Security), backup classrooms (Reliability), enough seats for students (Performance), avoid renting empty rooms (Cost), and save energy (Sustainability). / 學校的流程、門禁、備用教室、座位、預算與節能。
+
+**Final knowledge check (5/5 correct):**
+1. Scale EC2 capacity up/down with traffic → **C — Performance Efficiency**.
+2. Survive an AZ outage with multi-AZ targets and ALB → **B — Reliability**.
+3. Right-size chronically underused EC2 to lower bills → **C — Cost Optimization**.
+4. Use CloudFormation to standardize and automate deployment → **A — Operational Excellence**.
+5. Reduce energy use and environmental impact → **C — Sustainability**.
+
+**Exam trap / 考試陷阱:** One design choice can support several pillars. Choose the **MOST directly emphasized** business requirement: scaling for speed (Performance), recovery (Reliability), spending (Cost), or environmental impact (Sustainability). / 同一做法可能對應多個支柱，依題目主要目的判斷。
+
+### Module 02 completion checkpoint / 模組完成檢查
+
+- [x] Six foundational instructor-style checkpoints: **6/6**.
+- [x] Local Zones / Outposts / Wavelength / CloudFront scenarios: **6/6**.
+- [x] CloudFront / Global Accelerator scenarios: **6/6**.
+- [x] Shared Responsibility scenarios: **4/4**.
+- [x] Well-Architected final check: **5/5**.
+- **Total original formative practice: 27/27 correct.** Not an official exam result or readiness guarantee. / 共 27 題自編練習全對，不代表正式考試成績。
+- [x] Module 02 review completed; next: Module 03. / Module 02 複習完成，下一步 Module 03。
+- **Personal AWS rebuild:** Not started. Requires explicit user approval, cost estimate, budget alerts, and cleanup plan before deployment. / 尚未啟動個人 AWS 重建。
