@@ -90,3 +90,62 @@ Design AWS solutions that balance availability, performance, security, cost, ope
 
 ## Suggested next review
 Compare Regions vs AZs vs Edge Locations; test scenario-based distinctions among the six pillars; review Shared Responsibility and Well-Architected trade-offs.
+
+
+## Additional review: Local Zones, Outposts, Wavelength, and CloudFront / 延伸複習
+
+> These are **six original SAA-style practice questions** from our study session, not official AWS exam questions. 本節為自編情境練習，非 AWS 官方考題。
+
+### Key concepts / 核心概念
+
+- **AWS Local Zones — 城市附近的運算:** An extension of a parent AWS Region that places supported compute and other services near users in a metropolitan area. Typical clue: **single-digit-millisecond latency + compute near a city**. Service and instance availability is limited compared with a Region. / 延伸母區域，讓支援的運算服務更靠近城市使用者；並非完整獨立 Region。
+- **Amazon CloudFront and Edge Locations — 內容靠近使用者:** CDN that caches and delivers eligible content from points of presence worldwide. Typical clue: **global website images, videos, static content, caching**. / 全球內容傳遞與快取；不等於把整個應用程式搬到 Edge Location。
+- **AWS Outposts — AWS 在企業現場:** AWS-managed infrastructure installed at a customer's on-premises location for supported workloads. Typical clue: **on-premises + AWS infrastructure + local processing**. Some local workloads can continue during a temporary Region connectivity disruption, but management and certain services depend on connectivity. / AWS 設備設於客戶場所；不是完全離線的獨立 Region。
+- **AWS Wavelength — 電信網路附近的運算:** Supported AWS services integrated with telecommunications providers' networks for low-latency mobile applications, including 5G scenarios. Typical clue: **5G mobile network + low-latency application compute**. / 適合需靠近電信網路的低延遲行動應用。
+- **Multi-AZ + ALB — 高可用性:** Run application targets across multiple Availability Zones and route requests to healthy targets. Configure health checks and sufficient capacity for failover. / 跨 AZ 部署與健康檢查，以承受單一 AZ 故障。
+
+### 3rd-grade analogy / 三年級比喻
+Imagine a restaurant: **Region** = central kitchen; **AZs** = independent kitchens in separate buildings; **Local Zone** = AWS-operated kitchen nearer customers; **Outposts** = AWS installs a kitchen inside your restaurant; **Wavelength** = a kitchen integrated into a mobile carrier's delivery network; **CloudFront** = nearby pickup counters stocked with popular ready-made items. / 中央廚房、不同廠房、附近分店、店內設備、電信網路服務站，以及附近的取貨點，各自解決不同問題。
+
+### Practice questions / 練習題（先作答，再看答案）
+
+**Q1.** A real-time game hosted in Oregon has players in Los Angeles. The game requires interactive server-side compute close to players. Which is best? **A** CloudFront image caching; **B** Local Zone near Los Angeles; **C** S3 Cross-Region Replication; **D** More AZs in Oregon.
+
+**Q2.** A global e-commerce site needs faster image delivery to users in Asia and Europe without deploying EC2 everywhere. Which is best? **A** EC2 in Local Zones worldwide; **B** CloudFront; **C** Three AZs in one Region; **D** Direct Connect for all visitors.
+
+**Q3.** Physicians interact with remote 3D medical-imaging workstations and need compute nearer their hospital to reduce input lag. Which is best? **A** CloudFront; **B** Local Zones; **C** S3 Transfer Acceleration; **D** Route 53.
+
+**Q4.** A factory requires AWS infrastructure physically on-premises for low-latency robotic control, with sometimes-unreliable network connectivity. Which is best? **A** Local Zones; **B** CloudFront; **C** Outposts; **D** Global Accelerator.
+
+**Q5.** An AR mobile application needs low-latency processing integrated with a telecommunications provider's 5G network. Which is best? **A** Local Zones; **B** Outposts; **C** Wavelength; **D** CloudFront.
+
+**Q6.** A global website must survive one AZ failure and load images quickly worldwide. Which combination is best? **A** Single AZ + Local Zones; **B** Multi-AZ EC2 behind ALB + CloudFront; **C** Outposts in every country; **D** Wavelength + S3 Cross-Region Replication.
+
+### Answers and explanations / 答案與解析
+
+1. **B — Local Zones.** Compute must be near city users; caching images, S3 replication, or additional AZs in Oregon do not address interactive server latency. / 需要靠近玩家的運算，而非僅快取圖片。
+2. **B — CloudFront.** Caching images at edge locations improves worldwide delivery without running EC2 in every geography. / 全球圖片傳遞首選 CDN。
+3. **B — Local Zones.** Remote workstations require nearby interactive compute, not static-content caching, S3 transfer, or DNS alone. / 需要低延遲遠端運算。
+4. **C — Outposts.** The explicit **on-premises** requirement distinguishes Outposts from AWS-operated Local Zones. Connectivity and supported-service limitations still apply. / 設備必須在工廠內。
+5. **C — Wavelength.** The distinguishing clue is compute integrated with a **telecom 5G network**. / 關鍵是電信業者的 5G 網路。
+6. **B — Multi-AZ EC2 + ALB + CloudFront.** Multi-AZ targets and health-aware routing support availability; CloudFront accelerates global image delivery. Consider ASG for automatic replacement and scaling. / 跨 AZ 容錯與全球內容加速要分別解決。
+
+**Session result / 本輪成績: 6/6 correct.** This is practice performance, not an official exam readiness score. / 練習全對，但不等於正式考試保證通過。
+
+### Exam traps / 考試陷阱
+
+- **Low latency** alone is not enough: identify *what* needs to be close — compute, cached content, mobile-network processing, or on-premises infrastructure.
+- **Local Zone ≠ AZ:** a Local Zone targets proximity; Multi-AZ architecture targets fault isolation and resilience.
+- **CloudFront ≠ Global Accelerator:** CloudFront is a CDN with caching; Global Accelerator improves routing to application endpoints using the AWS global network and static anycast IP addresses.
+- **Outposts ≠ fully disconnected AWS Region:** review connectivity and service constraints.
+- **Wavelength ≠ all 5G traffic automatically needs Wavelength:** the workload must benefit from compute in a supported telecom-network location.
+
+### Learning checkpoint / 學習檢查
+
+- [x] Distinguish Local Zones from CloudFront / 分辨運算與內容快取。
+- [x] Recognize Outposts from on-premises requirements / 辨識企業現場部署。
+- [x] Recognize Wavelength from telecom/5G clues / 辨識電信網路情境。
+- [x] Combine Multi-AZ + ALB + CloudFront / 結合可用性與全球加速。
+- [ ] Next: Compare **CloudFront vs AWS Global Accelerator** with scenario questions / 下一步比較兩者。
+
+**Print note / 列印提醒:** Markdown-first; no PDF required. Answers are separated from the question block so they can be covered while practicing. / 採 Markdown，題目與解析分段，方便從 GitHub 列印後遮住答案練習。
