@@ -80,13 +80,17 @@ These are plans for independent learning, separate from completed classroom labs
 | [Challenge Lab 14 serverless reporting companion plan](personal-labs/challenge-lab-14-serverless-reporting-companion-plan.md) | 🟢 Yes — High Learning Value; rebuild private RDS → Lambda reporting → SNS + EventBridge from zero; plan only |
 | [Containerized microservices companion plan](personal-labs/containerized-microservices-companion-plan.md) | 🟢 Yes — Very High Learning Value; rebuild VPC → Docker/ECR → ECS on EC2 → ALB path routing → microservices from zero; plan only |
 
+## SAA-C03 Exam Review / 考試複習
+
+Exam-preparation notes live in [`exam-review/`](exam-review/) and are separate from the original AWS Academy lessons. Module 02: [Study notes](exam-review/module-02/study-notes.md). Printable PDFs are prepared separately and will be added when binary upload is available.
+
 ## Knowledge Checks
 
 Concept summaries and learning corrections from completed study sessions; these do not reproduce the quizzes verbatim.
 
 | Module | Study notes | Quick review |
 | --- | --- | --- |
-| Module 2 — Introducing Cloud Architecting | [Module 2 six-checkpoint bilingual review](knowledge-checks/module-02-introducing-cloud-architecting.md) | Included in study notes |
+| Module 2 — Introducing Cloud Architecting | [Module 2 six-checkpoint bilingual review](exam-review/module-02/study-notes.md) | Included in study notes |
 | Module 5 — EC2 and storage concepts | [Module 5 Knowledge Check](knowledge-checks/module-05-knowledge-check.md) | [Module 5 cheat sheet](cheat-sheets/module-05-knowledge-check-cheat-sheet.md) |
 | Module 6 — Database concepts | [Module 6 Knowledge Check](knowledge-checks/module-06-knowledge-check.md) | [Module 6 cheat sheet](cheat-sheets/module-06-knowledge-check-cheat-sheet.md) |
 | Module 7 — VPC networking concepts | [Module 7 Knowledge Check](knowledge-checks/module-07-knowledge-check.md) | [Module 7 cheat sheet](cheat-sheets/module-07-knowledge-check-cheat-sheet.md) |
