@@ -149,3 +149,59 @@ Imagine a restaurant: **Region** = central kitchen; **AZs** = independent kitche
 - [ ] Next: Compare **CloudFront vs AWS Global Accelerator** with scenario questions / 下一步比較兩者。
 
 **Print note / 列印提醒:** Markdown-first; no PDF required. Answers are separated from the question block so they can be covered while practicing. / 採 Markdown，題目與解析分段，方便從 GitHub 列印後遮住答案練習。
+
+
+## Additional practice: CloudFront vs. AWS Global Accelerator / 全球加速服務比較
+
+> Six original SAA-style practice scenarios from this study session, not official AWS exam questions. 本節為自編題目，非官方考題。
+
+### Core distinction / 核心差異
+
+- **Amazon CloudFront** is a content delivery network (CDN). It caches eligible HTTP/HTTPS content at edge locations and can also forward and accelerate dynamic HTTP/HTTPS requests without caching them. / CloudFront 是 CDN，可快取靜態內容，也能轉送不快取的動態 HTTP/HTTPS 請求。
+- **AWS Global Accelerator** provides static anycast IP addresses and routes supported TCP/UDP application traffic over the AWS global network to healthy regional endpoints. It does **not** cache application content. / Global Accelerator 提供靜態 Anycast IP，改善 TCP/UDP 到健康端點的網路路徑，不快取內容。
+- **Amazon Route 53** provides DNS resolution and routing policies, including health-check-based DNS failover. DNS caching/TTL can affect how quickly clients observe changes. / Route 53 是 DNS 服務，支援 DNS 故障轉移，但可能受到 DNS 快取影響。
+- **Amazon S3 Transfer Acceleration** improves long-distance object transfers to/from S3 using AWS edge infrastructure; it is not a general-purpose application accelerator. / S3 Transfer Acceleration 專注 S3 物件傳輸。
+
+### 3rd-grade analogy / 三年級比喻
+CloudFront is a neighborhood pickup counter stocked with popular goods; Global Accelerator is an efficient highway entrance that guides customers to an operating store; Route 53 is the directory that tells customers where a store is. / CloudFront 是附近取貨站；Global Accelerator 是智慧高速公路入口；Route 53 是查詢地址的電話簿。
+
+### Practice questions / 練習題
+
+**Q1.** A worldwide multiplayer game uses UDP and requires static IP addresses and optimized network routes. Best service? A CloudFront; **B Global Accelerator**; C Route 53; D Local Zones.
+
+**Q2.** An application has endpoints in two Regions, uses TCP, requires static IPs, health-based failover, and optimized global routing. Best service? A Route 53 failover; B CloudFront; **C Global Accelerator**; D Direct Connect.
+
+**Q3.** Images and videos stored in S3 should load quickly worldwide while reducing repeat origin requests. Best service? A Global Accelerator; **B CloudFront**; C Route 53; D Local Zones.
+
+**Q4.** A financial application uses TCP, requires static anycast IPs, does not need caching, and wants improved global routing. Best service? A CloudFront; B Route 53; **C Global Accelerator**; D S3 Transfer Acceleration.
+
+**Q5.** A global HTTPS website wants to cache /images/* at edge locations but forward /api/* requests to the origin. Best single service? A Global Accelerator; **B CloudFront**; C Route 53; D Direct Connect.
+
+**Q6.** A TCP application requires fixed IPs, automatic failover between healthy endpoints in different Regions, optimized global routes, and no content caching. Best solution? A CloudFront multiple origins; B Route 53 failover; **C Global Accelerator with multi-Region endpoints**; D S3 Transfer Acceleration.
+
+### Answers and explanations / 答案與解析
+
+1. **B — Global Accelerator:** UDP + static anycast IPs + global network optimization. CloudFront is not a general UDP gaming accelerator. / UDP 與固定 Anycast IP 是線索。
+2. **C — Global Accelerator:** Static IPs and AWS-network-based endpoint failover distinguish it from DNS-based Route 53 failover. Existing TCP connections may still need reconnecting after endpoint failure. / 靜態 IP 與端點故障轉移，不等於既有連線不中斷。
+3. **B — CloudFront:** Caches eligible S3 content at edge locations, improving delivery and reducing repeated origin fetches. / 快取圖片與影片，減少回源請求。
+4. **C — Global Accelerator:** TCP + static anycast IPs + no caching. Note CloudFront can still accelerate dynamic HTTP/HTTPS, but lacks this static anycast IP access model. / 不要只因為動態內容就排除 CloudFront；此題的固定 IP 才是關鍵。
+5. **B — CloudFront:** Cache behaviors can apply different policies and origins to /images/* and /api/*; dynamic requests can pass through without caching. / 可依路徑設定不同快取行為。
+6. **C — Global Accelerator:** Regional endpoints, health-aware traffic routing, static IPs, and global network optimization match all requirements. Route 53 provides DNS failover but not the same static anycast IP entry point. / 同時滿足跨區健康端點、固定 IP 與網路加速。
+
+**Learning result / 本輪成績: 6/6 correct.** This reflects these practice questions only, not a full SAA-C03 diagnostic. / 六題全對，並非正式模擬考成績。
+
+### Exam memory cues / 考前速記
+
+- **Cache images / reduce origin requests → CloudFront.**
+- **HTTP/HTTPS dynamic requests with path-based cache behaviors → CloudFront.**
+- **TCP or UDP + static anycast IP + global network optimization → Global Accelerator.**
+- **DNS resolution or DNS-based failover → Route 53.**
+- **Long-distance S3 uploads → S3 Transfer Acceleration.**
+
+### Learning checkpoint / 學習檢查
+
+- [x] Identify CloudFront for static caching / 靜態快取。
+- [x] Recognize CloudFront can forward dynamic requests / 動態請求也能轉送。
+- [x] Identify Global Accelerator from TCP/UDP + static anycast IP / 辨認網路加速。
+- [x] Distinguish DNS failover from endpoint traffic routing / 分辨 DNS 與流量路由。
+- [ ] Review more ambiguous real-exam-style mixed scenarios / 後續挑戰混合情境。
