@@ -84,6 +84,8 @@ These are plans for independent learning, separate from completed classroom labs
 
 Exam-preparation notes live in [`exam-review/`](exam-review/) and are separate from the original AWS Academy lessons. Module 02: [Study notes](exam-review/module-02/study-notes.md). Printable PDFs are prepared separately and will be added when binary upload is available.
 
+- [Module 11 — Automating Your Architecture / 架構自動化](exam-review/module-11/study-notes.md)
+
 ## Knowledge Checks
 
 Concept summaries and learning corrections from completed study sessions; these do not reproduce the quizzes verbatim.
