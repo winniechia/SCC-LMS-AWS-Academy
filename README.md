@@ -84,6 +84,7 @@ These are plans for independent learning, separate from completed classroom labs
 
 Exam-preparation notes live in [`exam-review/`](exam-review/) and are separate from the original AWS Academy lessons. Module 02: [Study notes](exam-review/module-02/study-notes.md). Printable PDFs are prepared separately and will be added when binary upload is available.
 
+- [Module 6 — Adding a Database Layer / 新增資料庫層](exam-review/module-06/study-notes.md)
 - [Module 7 — Creating a Networking Environment / 建立網路環境](exam-review/module-07/study-notes.md)
 - [Module 9 — Securing User, Application, and Data Access / 保護使用者、應用程式與資料存取](exam-review/module-09/study-notes.md)
 - [Module 10 — Implementing Monitoring, Elasticity, and High Availability / 實作監控、彈性與高可用性](exam-review/module-10/study-notes.md)
