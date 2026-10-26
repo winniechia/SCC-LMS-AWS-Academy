@@ -1,4 +1,4 @@
-# Module 06 — Adding a Database Layer
+# Module 6 — Adding a Database Layer / 新增資料庫層
 AWS SAA-C03 | 中英雙語考前筆記 | 2026-10-21
 
 > 學習方式：三年級比喻 → 技術說明 → Exam keywords → 排除錯誤選項 → 一次一題。適合列印複習。
