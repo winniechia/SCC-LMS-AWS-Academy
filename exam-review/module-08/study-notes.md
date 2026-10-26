@@ -1,4 +1,4 @@
-# Module 08 — Connecting Networks
+# Module 08 — Connecting Networks｜連接網路
 AWS SAA-C03 | 中英雙語考前筆記 | 2026-10-24
 
 > Learning sequence / 學習方式：三年級比喻 → 技術與用途 → Exam keywords 與取捨 → 排除方法 → 一次一題。
